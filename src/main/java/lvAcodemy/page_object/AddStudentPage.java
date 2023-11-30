@@ -1,13 +1,13 @@
 package lvAcodemy.page_object;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
 
 public class AddStudentPage {
 
-    ChromeDriver driver;
+    WebDriver driver;
 
-    public AddStudentPage(ChromeDriver driver) {
+    public AddStudentPage(WebDriver driver) {
         this.driver = driver;
     }
 

@@ -1,6 +1,7 @@
 package lvAcodemy.page_object;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,7 +11,7 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.textToBePresentI
 
 public class Notifications {
 
-    ChromeDriver driver;
+    WebDriver driver;
     WebDriverWait waiter;
     public Notifications(ChromeDriver driver, WebDriverWait wait){
         this.driver = driver;
@@ -23,9 +24,10 @@ public class Notifications {
        return driver.findElement(notificationMessage);
     }
 
-    public String getNotificationSuccessMessage(){
-        waiter.until(textToBePresentInElement(getNotificationLocator(),"Student successfully added!"));
+    public String getNotificationSuccessMessage() {
+        waiter.until(textToBePresentInElement(getNotificationLocator(), "Student successfully added!"));
         getNotificationLocator().getText();
+        return null;
     }
 
 }
